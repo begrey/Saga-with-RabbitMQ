@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: saga-stock-service
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:ORCL
+    username: seegene
+    password: seegene
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: oracle
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest    
+
+---
+
+server:
+  port: 8082
+  
+---
+
+queue:
+  billed-order: BILLED_ORDER_EVENT
+  order-done: ORDER_DONE_EVENT
+  stock-decreased: STOCK_DECREASED_EVENT
+topic:
+  order-canceled: ORDER_CANCELED_TOPIC

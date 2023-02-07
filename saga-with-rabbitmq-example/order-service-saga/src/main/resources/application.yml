@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: saga-order-service
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:ORCL
+    username: seegene
+    password: seegene
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: oracle
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest    
+
+---
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api  
+  
+---
+
+queue:
+  order-create: ORDER_CREATED_EVENT
+  order-done: ORDER_DONE_EVENT
+  order-canceled: ORDER_CANCELED_EVENT
+  billed-done: BILLED_DONE_EVENT
+  stock-decreased: STOCK_DECREASED_EVENT
+  stock-error: STOCK_ERROR_EVENT
+  refund-payment: REFUND_PAYMENT_EVENT

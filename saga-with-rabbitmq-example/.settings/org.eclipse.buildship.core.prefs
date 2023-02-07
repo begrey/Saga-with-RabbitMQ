@@ -1,0 +1,13 @@
+arguments=
+auto.sync=false
+build.scans.enabled=false
+connection.gradle.distribution=GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(C\:\\dev\\runtime\\Gradle-7.4.2))
+connection.project.dir=
+eclipse.preferences.version=1
+gradle.user.home=C\:/dev/repository/gradle_home
+java.home=C\:/dev/runtime/OpenJDK-17
+jvm.arguments=
+offline.mode=false
+override.workspace.settings=true
+show.console.view=true
+show.executions.view=true
